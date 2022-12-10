@@ -16,6 +16,7 @@ import java.io.File
 import java.io.InputStream
 import java.util.*
 import java.util.zip.GZIPInputStream
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     private val binDir by lazy {
@@ -132,6 +133,9 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.settings -> {
                 showSettingsDialog()
+            }
+            R.id.exit -> {
+                exitProcess(0)
             }
         }
         return true

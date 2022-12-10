@@ -4,6 +4,10 @@
       tools:context="pers.zhc.frpss.MainActivity">
     <item android:id="@+id/settings"
           android:title="@string/action_settings"
-          android:orderInCategory="100"
           app:showAsAction="never"/>
+    <item
+            android:id="@+id/exit"
+            android:title="Exit"
+            app:showAsAction="never"
+    />
 </menu>
