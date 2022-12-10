@@ -22,7 +22,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/frp_log_et"
-                    android:enabled="false"
+                    tools:text="test"
+                    android:textSize="15sp"
+                    android:gravity="start|top"
+                    android:focusable="false"
+                    android:cursorVisible="false"
             />
         </ScrollView>
         <ScrollView
@@ -35,7 +39,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/ss_log_et"
-                    android:enabled="false"
+                    android:textSize="15sp"
+                    tools:text="text"
+                    android:gravity="start|top"
+                    android:focusable="false"
+                    android:cursorVisible="false"
             />
         </ScrollView>
     </LinearLayout>
