@@ -21,9 +21,9 @@
             <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/frp_log_et"
-                    tools:text="test"
+                    android:id="@+id/ss_log_et"
                     android:textSize="15sp"
+                    tools:text="ss log"
                     android:gravity="start|top"
                     android:focusable="false"
                     android:cursorVisible="false"
@@ -38,9 +38,9 @@
             <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ss_log_et"
+                    android:id="@+id/frp_log_et"
+                    tools:text="frp log"
                     android:textSize="15sp"
-                    tools:text="text"
                     android:gravity="start|top"
                     android:focusable="false"
                     android:cursorVisible="false"
@@ -58,19 +58,19 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="frpc"
+                android:text="ssserver"
                 android:textAllCaps="false"
                 tools:ignore="HardcodedText"
-                android:id="@+id/frp_start_btn"
+                android:id="@+id/ss_start_btn"
         />
         <com.google.android.material.button.MaterialButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="ssserver"
+                android:text="frpc"
                 android:textAllCaps="false"
                 tools:ignore="HardcodedText"
-                android:id="@+id/ss_start_btn"
+                android:id="@+id/frp_start_btn"
         />
     </LinearLayout>
 </RelativeLayout>
