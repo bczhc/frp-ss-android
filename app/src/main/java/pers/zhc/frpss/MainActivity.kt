@@ -11,7 +11,7 @@ import pers.zhc.frpss.databinding.ActivityMainBinding
 import pers.zhc.frpss.databinding.SettingsMenuBinding
 import pers.zhc.util.IOUtils
 import java.io.File
-import java.util.zip.GZIPOutputStream
+import java.util.zip.GZIPInputStream
 
 class MainActivity : AppCompatActivity() {
     private val binDir by lazy {
@@ -62,12 +62,12 @@ class MainActivity : AppCompatActivity() {
     private fun decompressRawFile(@RawRes raw: Int, file: File) {
         val rawIS = resources.openRawResource(raw)
         val fileOS = file.outputStream()
-        val gzipOS = GZIPOutputStream(fileOS)
-        IOUtils.streamWrite(rawIS, gzipOS)
 
-        gzipOS.close()
-        fileOS.close()
+        val gzipIS = GZIPInputStream(rawIS)
+        IOUtils.streamWrite(gzipIS, fileOS)
+        gzipIS.close()
         rawIS.close()
+        fileOS.close()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
